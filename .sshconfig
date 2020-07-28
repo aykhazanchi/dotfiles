@@ -1,0 +1,29 @@
+Host *
+	CanonicalizeHostname Always
+	ServerAliveInterval 60
+	ServerAliveCountMax 4
+
+Host akzn
+	Hostname akzn.me
+	Port 22
+	User akhazanc
+	IdentityFile ~/workspace/keys/akzn-dot-me
+	#IdentityFile ~/workspace/keys/akzn
+	ForwardAgent yes
+	IdentitiesOnly yes
+
+Host machub
+	#Hostname Machub.local
+	Hostname 192.168.1.200 
+	Port 22
+	User machub_local
+	ForwardAgent yes
+	#IdentitiesOnly yes
+
+Host pi
+	Hostname 192.168.1.201
+	Port 22
+	User pi
+	IdentityFile ~/workspace/keys/pi_pvt_key
+	ForwardAgent yes
+	IdentitiesOnly yes
