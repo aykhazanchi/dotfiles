@@ -7,6 +7,10 @@ export ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor line)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$HOME/.tgenv/bin:$PATH"
 export PATH="$HOME/.tfenv/bin:$PATH"
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Add brew to path
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
