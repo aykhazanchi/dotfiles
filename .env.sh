@@ -32,6 +32,7 @@ eval "$(pyenv init -)"
 zstyle :omz:plugins:ssh-agent identities ~/workspace/keys/git/{akzn}
 zstyle :omz:plugins:ssh-agent agent-forwarding yes
 ssh-add ~/workspace/keys/git/akzn
+ssh-add ~/workspace/keys/git/akzn-dot-me
 
 # Brew command-not-found
 HB_CNF_HANDLER="$(brew --repository)/Library/Taps/homebrew/homebrew-command-not-found/handler.sh"
@@ -40,13 +41,16 @@ source "$HB_CNF_HANDLER";
 fi
 
 # Rust cargo
-. "$HOME/.cargo/env"
+if [ -e "$HOME/.cargo/env" ]; then
+    . "$HOME/.cargo/env"
+fi
 
 # Minikube docker env
 eval $(minikube docker-env)
 
 # aliases
 alias zshrc="vim ~/.zshrc"
+alias envsh="vim ~/.env.sh"
 alias c="cd"
 alias pip="pip3"
 alias weather="curl wttr.in?0"
@@ -59,3 +63,4 @@ alias la="ls -laFh"
 
 # alias function
 mk(){ mkdir -p "$1" && cd "$1"; }
+cheat(){ curl cheat.sh/"$1"; }

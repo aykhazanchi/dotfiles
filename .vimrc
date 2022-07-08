@@ -38,5 +38,8 @@ set showmatch           " show matching bracket
 " other
 set guioptions=aAace    " don't show scrollbar in MacVim
 
+" set mouse click to not do auto switch to visual mode
+set mouse-=a
+
 " clipboard
-" set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
+set clipboard=unnamed   " allow yy, etc. to interact with OS X clipboard
