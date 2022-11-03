@@ -10,7 +10,7 @@ export PATH="$HOME/.tfenv/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Add brew to path
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/usr/local/bin/brew shellenv)"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

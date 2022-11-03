@@ -6,3 +6,5 @@ cp .gitconfig ~/
 cp .sshconfig ~/.ssh/config
 cp .vimrc ~/
 cp fino.zsh-theme ~/.oh-my-zsh/themes
+
+omz reload
